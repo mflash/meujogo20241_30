@@ -5,8 +5,13 @@ extends CharacterBody2D
 
 var rotation_direction = 0
 
-var target = position
+var target : Vector2
 
+func _ready() -> void:
+	# inicializa o target quando o nodo está pronto
+	# (ou seja, já está na cena)
+	target = position
+	
 func get_8way_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	#print(input_direction)
