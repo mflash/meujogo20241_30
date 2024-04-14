@@ -12,6 +12,8 @@ func _ready() -> void:
 	# (ou seja, já está na cena)
 	target = position
 	
+# Funções de ENTRADA
+
 func get_8way_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	#print(input_direction)
@@ -33,27 +35,32 @@ func get_click_input():
 		target = get_global_mouse_position()
 		#print(target)
 
+# Funções de MOVIMENTO
+
 # movimento nas 8 direções
-#func _physics_process(delta):
-	#get_8way_input()
-	#move_and_slide()
+func move_8way(delta):
+	get_8way_input()
+	move_and_slide()
 	
 # gira com setas esq-dir, avança/retorna com setas up-down
-#func _physics_process(delta):
-	#get_rotation_input()
-	#rotation += rotation_direction * rotation_speed * delta
-	#move_and_slide()
+func move_rotation(delta):
+	get_rotation_input()
+	rotation += rotation_direction * rotation_speed * delta
+	move_and_slide()
 
 # gira com mouse, avança/retorna com setas up-down
-#func _physics_process(delta):
-	#get_mouse_input()
-	#move_and_slide()
+func move_mouse_rot(delta):
+	get_mouse_input()
+	move_and_slide()
 
 # click and move
-func _physics_process(delta):
+func move_click(delta):
 	get_click_input()
 	velocity = position.direction_to(target) * speed
 	#print(velocity)
 	#look_at(target)
 	if position.distance_to(target) > 10:
 		move_and_slide()
+
+func _physics_process(delta):
+	move_8way(delta)
