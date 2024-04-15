@@ -1,10 +1,109 @@
-[gd_scene load_steps=2 format=3 uid="uid://dwos3v6di3ijs"]
+[gd_scene load_steps=14 format=3 uid="uid://dwos3v6di3ijs"]
 
-[ext_resource type="PackedScene" uid="uid://pjhu0exfs8r6" path="res://player.tscn" id="1_ulyjh"]
+[ext_resource type="PackedScene" uid="uid://eq8k6of4kdut" path="res://anim_player.tscn" id="1_p77po"]
+[ext_resource type="Texture2D" uid="uid://divsjqeywyyjf" path="res://bricks/Brick2_Texture.jpg" id="2_q03mn"]
+[ext_resource type="Texture2D" uid="uid://ue8pbs8rpww1" path="res://grass/grass2.png" id="3_bj7s4"]
+[ext_resource type="Texture2D" uid="uid://bwahhpo8f1twq" path="res://grass/grass1.png" id="4_1khka"]
+[ext_resource type="Texture2D" uid="uid://bswa42qlqa4rl" path="res://grass/grass3.png" id="5_3ub6t"]
+[ext_resource type="Texture2D" uid="uid://s4h65j5lrn8g" path="res://grass/grass4.png" id="6_xbfhn"]
+[ext_resource type="Texture2D" uid="uid://c1842t64r54gl" path="res://grass/grass5.png" id="7_pbwtn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3s7vi"]
+size = Vector2(44, 440)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2pp6g"]
+size = Vector2(284, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6wqro"]
+size = Vector2(376, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_02rcf"]
+size = Vector2(196, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xtlp"]
+size = Vector2(89, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2nph"]
+size = Vector2(43, 41)
 
 [node name="Game" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_ulyjh")]
-position = Vector2(572, 304)
+[node name="AnimPlayer" parent="." instance=ExtResource("1_p77po")]
+position = Vector2(591, 319)
+gravity = 3500.0
+metadata/_edit_group_ = true
 
-[editable path="Player"]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(1023, 278)
+metadata/_edit_group_ = true
+
+[node name="Brick2Texture" type="Sprite2D" parent="StaticBody2D"]
+scale = Vector2(0.175781, 1.71094)
+texture = ExtResource("2_q03mn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_3s7vi")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(790, 466)
+metadata/_edit_group_ = true
+
+[node name="Grass2" type="Sprite2D" parent="StaticBody2D3"]
+texture = ExtResource("3_bj7s4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D3"]
+visible = false
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_2pp6g")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(482, 573)
+metadata/_edit_group_ = true
+
+[node name="Grass1" type="Sprite2D" parent="StaticBody2D2"]
+texture = ExtResource("4_1khka")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+visible = false
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_6wqro")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(195, 442)
+metadata/_edit_group_ = true
+
+[node name="Grass3" type="Sprite2D" parent="StaticBody2D4"]
+texture = ExtResource("5_3ub6t")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D4"]
+visible = false
+position = Vector2(2, -1)
+shape = SubResource("RectangleShape2D_02rcf")
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+position = Vector2(464, 355)
+metadata/_edit_group_ = true
+
+[node name="Grass4" type="Sprite2D" parent="StaticBody2D5"]
+texture = ExtResource("6_xbfhn")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D5"]
+visible = false
+position = Vector2(1.5, -0.5)
+shape = SubResource("RectangleShape2D_4xtlp")
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="."]
+position = Vector2(664, 271)
+metadata/_edit_group_ = true
+
+[node name="Grass5" type="Sprite2D" parent="StaticBody2D6"]
+texture = ExtResource("7_pbwtn")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D6"]
+visible = false
+position = Vector2(-1.5, -2.5)
+shape = SubResource("RectangleShape2D_g2nph")
+
+[editable path="AnimPlayer"]
