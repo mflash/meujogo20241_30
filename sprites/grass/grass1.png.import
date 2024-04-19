@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jl6xreh0mdot"
-path="res://.godot/imported/Brickwall5_Texture.png-ce23356726499b9d03c84b2d7ded4940.ctex"
+uid="uid://bwahhpo8f1twq"
+path="res://.godot/imported/grass1.png-f5c7dc8af4396de9385c27f4345b4efc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bricks/Brickwall5_Texture.png"
-dest_files=["res://.godot/imported/Brickwall5_Texture.png-ce23356726499b9d03c84b2d7ded4940.ctex"]
+source_file="res://sprites/grass/grass1.png"
+dest_files=["res://.godot/imported/grass1.png-f5c7dc8af4396de9385c27f4345b4efc.ctex"]
 
 [params]
 

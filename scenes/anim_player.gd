@@ -4,6 +4,10 @@ extends CharacterBody2D
 @export var jump_speed := -1000.0
 @export var gravity := 2500.0
 @onready var sprite = $PlayerSprite
+#@onready var box := preload("res://objects/box.tscn"
+@export var box : PackedScene
+
+signal jumped
 
 #func _ready() -> void:
 #	sprite = $PlayerSprite
@@ -18,8 +22,14 @@ func get_side_input():
 	var vel := Input.get_axis("left", "right")
 	var jump := Input.is_action_just_pressed('jump')
 
-	if is_on_floor() and jump:
+	if is_on_floor() and jump:		
 		velocity.y = jump_speed
+		# Emitir o sinal "jumped"
+		# jumped.emit()
+		get_tree().call_group("hud", "updateScore")
+		var b : = box.instantiate()
+		b.position = global_position
+		owner.add_child(b)
 	velocity.x = vel * speed
 	
 func animate():

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c8lway8hxixym"]
 
-[ext_resource type="Texture2D" uid="uid://qhsovvshjw8f" path="res://char.png" id="1_6iofj"]
-[ext_resource type="Script" path="res://SimplePlayer.gd" id="2_fmuit"]
+[ext_resource type="Texture2D" uid="uid://qhsovvshjw8f" path="res://sprites/char.png" id="1_6iofj"]
+[ext_resource type="Script" path="res://scenes/SimplePlayer.gd" id="2_fmuit"]
 
 [node name="SimplePlayer" type="Sprite2D"]
 texture = ExtResource("1_6iofj")

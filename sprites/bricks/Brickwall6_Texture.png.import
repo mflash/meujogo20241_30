@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://r2gryjhj85n6"
-path="res://.godot/imported/Brickwall2_Texture.png-dc9713bc5bce026c70fdeec3fd6f97df.ctex"
+uid="uid://d3mo6figa1caa"
+path="res://.godot/imported/Brickwall6_Texture.png-79cded41d6ef295ea10eb8c8b85f1c4d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bricks/Brickwall2_Texture.png"
-dest_files=["res://.godot/imported/Brickwall2_Texture.png-dc9713bc5bce026c70fdeec3fd6f97df.ctex"]
+source_file="res://sprites/bricks/Brickwall6_Texture.png"
+dest_files=["res://.godot/imported/Brickwall6_Texture.png-79cded41d6ef295ea10eb8c8b85f1c4d.ctex"]
 
 [params]
 

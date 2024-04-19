@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://eq8k6of4kdut"]
+[gd_scene load_steps=22 format=3 uid="uid://eq8k6of4kdut"]
 
-[ext_resource type="Texture2D" uid="uid://qhsovvshjw8f" path="res://char.png" id="1_7jugg"]
-[ext_resource type="Script" path="res://anim_player.gd" id="1_qj2q4"]
+[ext_resource type="Texture2D" uid="uid://qhsovvshjw8f" path="res://sprites/char.png" id="1_7jugg"]
+[ext_resource type="Script" path="res://scenes/anim_player.gd" id="1_qj2q4"]
+[ext_resource type="PackedScene" uid="uid://b6y42ctqd34h6" path="res://objects/box.tscn" id="2_3wqxn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d5iy6"]
 atlas = ExtResource("1_7jugg")
@@ -143,6 +144,7 @@ size = Vector2(36, 58)
 
 [node name="AnimPlayer" type="CharacterBody2D"]
 script = ExtResource("1_qj2q4")
+box = ExtResource("2_3wqxn")
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vov88")
@@ -151,3 +153,5 @@ animation = &"down"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 2)
 shape = SubResource("RectangleShape2D_g841h")
+
+[node name="Camera2D" type="Camera2D" parent="."]

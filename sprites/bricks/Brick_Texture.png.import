@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3q0yf25mtcf1"
-path="res://.godot/imported/Stonewall_Texture.png-e9cbc4b1aa55bcda6e3537fe2b616e9e.ctex"
+uid="uid://c7biplxgr70mb"
+path="res://.godot/imported/Brick_Texture.png-093b29323ffb35d44690f99edc52159d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bricks/Stonewall_Texture.png"
-dest_files=["res://.godot/imported/Stonewall_Texture.png-e9cbc4b1aa55bcda6e3537fe2b616e9e.ctex"]
+source_file="res://sprites/bricks/Brick_Texture.png"
+dest_files=["res://.godot/imported/Brick_Texture.png-093b29323ffb35d44690f99edc52159d.ctex"]
 
 [params]
 

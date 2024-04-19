@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4f4etxh5wcdg"
-path="res://.godot/imported/Brickwall3_Texture.png-4626c3b323ae865d0d49e432702427f2.ctex"
+uid="uid://ck73aepe3675u"
+path="res://.godot/imported/Bluerock_Texture.jpg-cf3cd8169a0813a1d90c4df7f7d201e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bricks/Brickwall3_Texture.png"
-dest_files=["res://.godot/imported/Brickwall3_Texture.png-4626c3b323ae865d0d49e432702427f2.ctex"]
+source_file="res://sprites/bricks/Bluerock_Texture.jpg"
+dest_files=["res://.godot/imported/Bluerock_Texture.jpg-cf3cd8169a0813a1d90c4df7f7d201e3.ctex"]
 
 [params]
 

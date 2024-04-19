@@ -1,17 +1,17 @@
 [gd_scene load_steps=3 format=3 uid="uid://qu33qc61ro5x"]
 
-[ext_resource type="Script" path="res://Main.gd" id="1_fhcma"]
-[ext_resource type="FontFile" uid="uid://dnjuhkvh4vye7" path="res://Xolonium-Regular.ttf" id="2_fqxuv"]
+[ext_resource type="Script" path="res://scenes/Main.gd" id="1_l8hac"]
+[ext_resource type="FontFile" uid="uid://dnjuhkvh4vye7" path="res://fonts/Xolonium-Regular.ttf" id="2_xuufs"]
 
 [node name="Main" type="Node2D"]
-script = ExtResource("1_fhcma")
+script = ExtResource("1_l8hac")
 
 [node name="Score" type="Label" parent="."]
 offset_left = 48.0
 offset_top = 32.0
 offset_right = 232.0
 offset_bottom = 105.0
-theme_override_fonts/font = ExtResource("2_fqxuv")
+theme_override_fonts/font = ExtResource("2_xuufs")
 theme_override_font_sizes/font_size = 60
 text = "Score
 "
