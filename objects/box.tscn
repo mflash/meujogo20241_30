@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6y42ctqd34h6"]
+[gd_scene load_steps=4 format=3 uid="uid://b6y42ctqd34h6"]
 
 [ext_resource type="Texture2D" uid="uid://majrcuslhou2" path="res://icon.svg" id="1_6qmhx"]
+[ext_resource type="Script" path="res://objects/box.gd" id="1_v8xhb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cgene"]
 size = Vector2(64, 64)
 
 [node name="Box" type="Area2D"]
+script = ExtResource("1_v8xhb")
 
 [node name="SpriteBox" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
@@ -14,3 +16,7 @@ texture = ExtResource("1_6qmhx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource("RectangleShape2D_cgene")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

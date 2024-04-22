@@ -1,124 +1,13 @@
-[gd_scene load_steps=16 format=3 uid="uid://dwos3v6di3ijs"]
+[gd_scene load_steps=4 format=3 uid="uid://dwos3v6di3ijs"]
 
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_ikpnh"]
-[ext_resource type="PackedScene" uid="uid://eq8k6of4kdut" path="res://scenes/anim_player.tscn" id="2_atdbv"]
-[ext_resource type="Texture2D" uid="uid://divsjqeywyyjf" path="res://sprites/bricks/Brick2_Texture.jpg" id="3_6stau"]
-[ext_resource type="Texture2D" uid="uid://ue8pbs8rpww1" path="res://sprites/grass/grass2.png" id="4_21qu4"]
-[ext_resource type="Texture2D" uid="uid://bwahhpo8f1twq" path="res://sprites/grass/grass1.png" id="5_wfd0j"]
-[ext_resource type="Texture2D" uid="uid://bswa42qlqa4rl" path="res://sprites/grass/grass3.png" id="6_5gyac"]
-[ext_resource type="Texture2D" uid="uid://s4h65j5lrn8g" path="res://sprites/grass/grass4.png" id="7_ntq1e"]
-[ext_resource type="Texture2D" uid="uid://c1842t64r54gl" path="res://sprites/grass/grass5.png" id="8_udbq3"]
+[ext_resource type="PackedScene" uid="uid://3qqbnw5ymsjf" path="res://levels/level_1.tscn" id="2_skwfc"]
 [ext_resource type="FontFile" uid="uid://dnjuhkvh4vye7" path="res://fonts/Xolonium-Regular.ttf" id="9_d35he"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3s7vi"]
-size = Vector2(44, 440)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2pp6g"]
-size = Vector2(284, 42)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6wqro"]
-size = Vector2(376, 42)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_02rcf"]
-size = Vector2(196, 40)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xtlp"]
-size = Vector2(89, 39)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2nph"]
-size = Vector2(43, 41)
 
 [node name="Game" type="Node2D" groups=["hud"]]
 script = ExtResource("1_ikpnh")
 
-[node name="AnimPlayer" parent="." instance=ExtResource("2_atdbv")]
-position = Vector2(563, 314)
-gravity = 3500.0
-metadata/_edit_group_ = true
-
-[node name="Camera2D" parent="AnimPlayer" index="2"]
-position_smoothing_enabled = true
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-drag_left_margin = 0.4
-drag_top_margin = 0.4
-drag_right_margin = 0.4
-drag_bottom_margin = 0.4
-editor_draw_limits = true
-editor_draw_drag_margin = true
-
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(1023, 278)
-metadata/_edit_group_ = true
-
-[node name="Brick2Texture" type="Sprite2D" parent="StaticBody2D"]
-scale = Vector2(0.175781, 1.71094)
-texture = ExtResource("3_6stau")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-visible = false
-position = Vector2(0, 2)
-shape = SubResource("RectangleShape2D_3s7vi")
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
-position = Vector2(790, 466)
-metadata/_edit_group_ = true
-
-[node name="Grass2" type="Sprite2D" parent="StaticBody2D3"]
-texture = ExtResource("4_21qu4")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D3"]
-visible = false
-position = Vector2(-1, 0)
-shape = SubResource("RectangleShape2D_2pp6g")
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(482, 573)
-metadata/_edit_group_ = true
-
-[node name="Grass1" type="Sprite2D" parent="StaticBody2D2"]
-texture = ExtResource("5_wfd0j")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-visible = false
-position = Vector2(-1, -1)
-shape = SubResource("RectangleShape2D_6wqro")
-
-[node name="StaticBody2D4" type="StaticBody2D" parent="."]
-position = Vector2(195, 442)
-metadata/_edit_group_ = true
-
-[node name="Grass3" type="Sprite2D" parent="StaticBody2D4"]
-texture = ExtResource("6_5gyac")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D4"]
-visible = false
-position = Vector2(2, -1)
-shape = SubResource("RectangleShape2D_02rcf")
-
-[node name="StaticBody2D5" type="StaticBody2D" parent="."]
-position = Vector2(464, 355)
-metadata/_edit_group_ = true
-
-[node name="Grass4" type="Sprite2D" parent="StaticBody2D5"]
-texture = ExtResource("7_ntq1e")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D5"]
-visible = false
-position = Vector2(1.5, -0.5)
-shape = SubResource("RectangleShape2D_4xtlp")
-
-[node name="StaticBody2D6" type="StaticBody2D" parent="."]
-position = Vector2(664, 271)
-metadata/_edit_group_ = true
-
-[node name="Grass5" type="Sprite2D" parent="StaticBody2D6"]
-texture = ExtResource("8_udbq3")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D6"]
-visible = false
-position = Vector2(-1.5, -2.5)
-shape = SubResource("RectangleShape2D_g2nph")
+[node name="Level1" parent="." instance=ExtResource("2_skwfc")]
 
 [node name="Timer" type="Timer" parent="."]
 
@@ -133,7 +22,7 @@ theme_override_fonts/font = ExtResource("9_d35he")
 theme_override_font_sizes/font_size = 50
 text = "Score : 0"
 
-[connection signal="jumped" from="AnimPlayer" to="." method="_on_anim_player_jumped"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 
-[editable path="AnimPlayer"]
+[editable path="Level1"]
+[editable path="Level1/AnimPlayer"]
