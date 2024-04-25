@@ -7,10 +7,6 @@
 [node name="Game" type="Node2D" groups=["hud"]]
 script = ExtResource("1_ikpnh")
 
-[node name="Level1" parent="." instance=ExtResource("2_skwfc")]
-
-[node name="Timer" type="Timer" parent="."]
-
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="ScoreLabel" type="Label" parent="HUD"]
@@ -22,7 +18,11 @@ theme_override_fonts/font = ExtResource("9_d35he")
 theme_override_font_sizes/font_size = 50
 text = "Score : 0"
 
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Level" parent="." instance=ExtResource("2_skwfc")]
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 
-[editable path="Level1"]
-[editable path="Level1/AnimPlayer"]
+[editable path="Level"]
+[editable path="Level/AnimPlayer"]

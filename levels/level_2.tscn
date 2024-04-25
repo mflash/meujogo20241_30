@@ -26,7 +26,7 @@ size = Vector2(89, 39)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2nph"]
 size = Vector2(43, 41)
 
-[node name="Level2" type="Node"]
+[node name="Level" type="Node"]
 
 [node name="AnimPlayer" parent="." instance=ExtResource("1_703kb")]
 position = Vector2(1024, 82)
