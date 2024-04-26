@@ -1,8 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://eq8k6of4kdut"]
+[gd_scene load_steps=23 format=3 uid="uid://eq8k6of4kdut"]
 
 [ext_resource type="Texture2D" uid="uid://qhsovvshjw8f" path="res://sprites/char.png" id="1_7jugg"]
 [ext_resource type="Script" path="res://scenes/anim_player.gd" id="1_qj2q4"]
 [ext_resource type="PackedScene" uid="uid://b6y42ctqd34h6" path="res://objects/box.tscn" id="2_3wqxn"]
+[ext_resource type="AudioStream" uid="uid://cmhdwxcekhkgx" path="res://SFX/jump1.ogg" id="4_regxu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d5iy6"]
 atlas = ExtResource("1_7jugg")
@@ -155,3 +156,8 @@ position = Vector2(-2, 2)
 shape = SubResource("RectangleShape2D_g841h")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_regxu")
+volume_db = -14.054
+bus = &"SFX"

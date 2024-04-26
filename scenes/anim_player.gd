@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var jump_speed := -1000.0
 @export var gravity := 2500.0
 @onready var sprite = $PlayerSprite
+@onready var jumpsound := $JumpSound
 #@onready var box := preload("res://objects/box.tscn"
 @export var box : PackedScene
 
@@ -29,7 +30,10 @@ func get_side_input():
 		get_tree().call_group("hud", "updateScore")
 		var b : = box.instantiate()
 		b.position = global_position
-		owner.add_child(b)
+		owner.add_child(b)		
+		jumpsound.play()
+		# Controle de volume (0 = padrão)
+		#AudioServer.set_bus_volume_db(2, 0)
 	velocity.x = vel * speed
 	
 func animate():

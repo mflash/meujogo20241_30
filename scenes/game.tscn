@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwos3v6di3ijs"]
+[gd_scene load_steps=5 format=3 uid="uid://dwos3v6di3ijs"]
 
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_ikpnh"]
 [ext_resource type="PackedScene" uid="uid://3qqbnw5ymsjf" path="res://levels/level_1.tscn" id="2_skwfc"]
+[ext_resource type="AudioStream" uid="uid://7aytyxh00lqr" path="res://SFX/Chiptune_Adventures_1.ogg" id="3_j5fss"]
 [ext_resource type="FontFile" uid="uid://dnjuhkvh4vye7" path="res://fonts/Xolonium-Regular.ttf" id="9_d35he"]
 
 [node name="Game" type="Node2D" groups=["hud"]]
@@ -18,9 +19,23 @@ theme_override_fonts/font = ExtResource("9_d35he")
 theme_override_font_sizes/font_size = 50
 text = "Score : 0"
 
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-248, 270)
+stream = ExtResource("3_j5fss")
+autoplay = true
+max_distance = 1000.0
+attenuation = 1.56917
+bus = &"Music"
+
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Level" parent="." instance=ExtResource("2_skwfc")]
+
+[node name="AnimPlayer" parent="Level" index="0"]
+position = Vector2(474, 257)
+
+[node name="StaticBody2D4" parent="Level/Scenery" index="4"]
+position = Vector2(173, 428)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 
