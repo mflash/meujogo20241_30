@@ -22,7 +22,6 @@ text = "Score : 0"
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-248, 270)
 stream = ExtResource("3_j5fss")
-autoplay = true
 max_distance = 1000.0
 attenuation = 1.56917
 bus = &"Music"
